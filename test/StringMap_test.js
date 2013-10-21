@@ -1,5 +1,6 @@
 var assert = require('assert');
 
+// EXERCISE: implement a string map that avoid the typical pitfalls
 var StringMap = require('../impl/StringMap');
 
 var sm = new StringMap();

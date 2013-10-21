@@ -1,5 +1,6 @@
-// Exercise:
-// Create file impl/iife_exists that passes the test
+// EXERCISE:
+// Create file impl/iife_exists that passes the test.
+// Approach: wrap as little as possible in an IIFE
 
 var assert = require('assert');
 
@@ -10,6 +11,8 @@ function setValue(value) {
         prevValue = value;
     }
 }
+
 setValue(3);
+
 // Fails:
 assert.ok(typeof prevValue === 'undefined');

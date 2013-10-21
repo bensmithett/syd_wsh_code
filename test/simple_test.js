@@ -1,5 +1,4 @@
 var assert = require('assert');
-
 var spaceit = require('../support/simple_spaceit');
 var simple_m = require('../support/simple_module');
 

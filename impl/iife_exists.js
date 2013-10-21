@@ -9,6 +9,8 @@ var setValue = function () {
         }
     };
 }();
+
 setValue(3);
+
 // Succeeds:
 assert.ok(typeof prevValue === 'undefined');

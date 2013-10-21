@@ -1,7 +1,9 @@
-// Implement Employee as a sub-constructor of Person
+// EXERCISE: implement Employee as a sub-constructor of Person
 
 var assert = require('assert');
+// super-constructor
 var Person = require('../support/Person');
+// sub-constructor (to be implemented)
 var Employee = require('../impl/Employee');
 
 // Structure of the prototype

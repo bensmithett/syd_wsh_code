@@ -1,8 +1,8 @@
 var assert = require('assert');
 
-// Implement StringBuilder with the Crockford pattern
-// Version that uses marked property keys:
-// StringBuilder_marked.js
+// EXERCISE: implement a StringBuilder with the Crockford pattern
+// You can base that version on the following code:
+// support/StringBuilder_marked.js
 
 var StringBuilder = require('../impl/StringBuilder');
 var sb = new StringBuilder();

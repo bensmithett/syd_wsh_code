@@ -1,4 +1,7 @@
 var assert = require('assert');
+
+// EXERCISE: implement the function
+// copyPropertiesFrom(target, source)
 var copyPropertiesFrom = require('../impl/copyPropertiesFrom');
 
 var source = Object.defineProperties({}, {
@@ -16,12 +19,15 @@ var source = Object.defineProperties({}, {
     }
 });
 
-var target = copyPropertiesFrom({}, source);
+var target = {};
+var result = copyPropertiesFrom(target, source);
 
-// Prevent the function from simply returning the source
-// (which would pass the subsequent tests)
-assert.notStrictEqual(source, target);
+// The function must return its first argument
+// (after modifying it)
+assert.strictEqual(result, target);
 
+// All properties of source must exist in target
+// and have the same attributes
 Object.getOwnPropertyNames(source)
 .forEach(function (key) {
     assert.deepEqual(
@@ -29,6 +35,7 @@ Object.getOwnPropertyNames(source)
         Object.getOwnPropertyDescriptor(target, key));
 });
 
+// source and target must have the same property keys
 assert.deepEqual(
     Object.getOwnPropertyNames(source).sort(),
     Object.getOwnPropertyNames(target).sort());
