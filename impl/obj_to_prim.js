@@ -1,16 +1,17 @@
-var results = [ 'hello ', 'world' ];
-var index = -1;
+var results = ["hello", "world"];
+var i = -1;
+
 exports.obj1 = {
-    toString: function () {
-        index = (index + 1) % 2;
-        return results[index];
-    }
+  toString: function () {
+    i = i+1;
+    return results[i];
+  }
 };
 
-var counter = 0;
+var counter = 0
 exports.obj2 = {
-    valueOf: function () {
-        counter++;
-        return counter;
-    }
+  valueOf: function () {
+    counter++;
+    return counter;
+  }
 };
